@@ -5,8 +5,7 @@
 <meta charset="utf-8" />
 <title><fmt:message key="app.title" /></title>
 <c:url value="/css/style.css" var="url" />
-<link rel="stylesheet" href="${url}" type="text/css"
-	media="screen, projection">
+<link rel="stylesheet" href="${url}" type="text/css" media="screen, projection">
 </head>
 <body>
 	<header>
@@ -42,28 +41,29 @@
 				calidad de vida. Desde cualquier lugar, en el momento que quieras
 				siempre a mano.</p>
 		</div>
-		<!-- 		<img src="intro_flower.png" alt="Flower" /> -->
+			   <c:url value="/css/intro_flower.png" var="image_url" />
+				<img src="${image_url}" alt="Flower" />
 	</section>
 	<section>
-		<p>
-			<br>
-			<c:forEach items="${model.users}" var="user">
-				userid:<c:out value="${user[0]}" />
-				username:<c:out value="${user[1]}" />
-				password:<c:out value="${user[2]}" />
-				enabled:<c:out value="${user[3]}" />
-				<br>
-				<br>
-			</c:forEach>
+<!-- 		<p> -->
+<!-- 			<br> -->
+<%-- 			<c:forEach items="${model.users}" var="user"> --%>
+<%-- 				userid:<c:out value="${user[0]}" /> --%>
+<%-- 				username:<c:out value="${user[1]}" /> --%>
+<%-- 				password:<c:out value="${user[2]}" /> --%>
+<%-- 				enabled:<c:out value="${user[3]}" /> --%>
+<!-- 				<br> -->
+<!-- 				<br> -->
+<%-- 			</c:forEach> --%>
 
-		</p>
+<!-- 		</p> -->
 	</section>
 	<aside>
 		<!-- Sidebar -->
 	</aside>
 	<footer>
 		<!-- Footer -->
-		<div></div>
+<!-- 		<div></div> -->
 	</footer>
 
 

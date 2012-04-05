@@ -9,17 +9,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.petercartagena.logincontrolapp.domain.User;
-import com.petercartagena.logincontrolapp.service.SimpleUserManager;
 
 public class SimpleUserManagerTests {
 
 	private SimpleUserManager	simpleUserManager;
 
-	private List<User>			users	= new ArrayList();
+	private List<User>			users;
 
 	@Before
 	public void setUp() {
+		
 		simpleUserManager = new SimpleUserManager();
+		users = new ArrayList<User>();
 
 		User user = new User();
 		user.setUserName("peter");

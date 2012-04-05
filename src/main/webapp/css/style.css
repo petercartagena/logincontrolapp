@@ -8,8 +8,8 @@ body {
 	width: 940px;
 	height: 800px;
 	/*TODO BORRAR*/
-/* 	border: 1px solid #FF0000; */
-	/*************/ 
+	/* 	border: 1px solid #FF0000; */
+	/*************/
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: #F0F0F0;
 }
@@ -27,7 +27,6 @@ header h2 {
 	font-style: italic;
 }
 
-
 /*------------------------------
 =NAVIGATION
 ------------------------------*/
@@ -36,7 +35,7 @@ nav {
 	left: 0;
 	width: 100%;
 	height: 40px;
-/* 	background: url("nav_background.png"); */
+	/* 	background: url("nav_background.png"); */
 	background: #213F52;
 }
 
@@ -73,9 +72,8 @@ nav ul li.subscribe a {
 	margin-left: 22px;
 	padding-left: 33px;
 	text-align: left;
-/* 	background: url("rss.png") left center no-repeat; */
+	/* 	background: url("rss.png") left center no-repeat; */
 }
-
 
 /*------------------------------
 =INTRODUCTION
@@ -84,7 +82,7 @@ nav ul li.subscribe a {
 	position: relative;
 	margin-top: 66px;
 	padding: 44px;
-	background: #417081 url("intro_background.png") repeat-x;
+	background: #4D4B23 url("intro_flowers.png") repeat-x;
 	/* Background-size not implemented yet */
 	-webkit-background-size: 100%;
 	-o-background-size: 100%;
@@ -122,8 +120,49 @@ nav ul li.subscribe a {
 	-webkit-border-radius: 22px;
 }
 
+/*------------------------------
+=CONTACT
+------------------------------*/
+#contact {
+	position: relative;
+	margin-top: 0px;
+	padding: 20px;
+/* 	background: #FFFFFF url("intro_background.png") repeat-x; */
+	/* Background-size not implemented yet */
+	-webkit-background-size: 100%;
+	-o-background-size: 100%;
+	-khtml-background-size: 100%;
+	/* Border-radius not implemented yet */
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	width: 100%;
+	height: 10%;
+/* 	border: 1px solid #FF0000; */
+}
 
+#contact h2,#contact p {
+	position: relative;
+	z-index: 9999;
+	width: 100%;
+}
 
+#contact h2 {
+	padding: 0 0 0 0;
+	font-weight: normal;
+	color: #11222D;
+}
+
+#contact h3 {
+	padding: 0 0 0 0;
+	font-weight: normal;
+	font: bold;
+	color: #11222D;
+}
+
+#contact p {
+	padding: 0;
+	color: #CDC75D;
+}
 
 /*------------------------------
 =FOOTER

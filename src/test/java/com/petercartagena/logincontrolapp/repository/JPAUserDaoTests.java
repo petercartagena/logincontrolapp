@@ -1,7 +1,6 @@
 package com.petercartagena.logincontrolapp.repository;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -26,7 +25,8 @@ public class JPAUserDaoTests {
 
 	@Test
 	public void testGetUserList() {
-		List<User> users = new ArrayList();
+//		List<User> users = new ArrayList();
+		List<User> users = new ArrayList<User>();
 		users = userDao.getUsersList();
 		Assert.assertEquals(users.size(), 3);
 	}

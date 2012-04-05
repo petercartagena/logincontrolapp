@@ -5,12 +5,8 @@
 <meta charset="utf-8" />
 <title><fmt:message key="app.title" /></title>
 <c:url value="/css/style.css" var="url" />
-<link rel="stylesheet" href="${url}" type="text/css"
-	media="screen, projection">
-<!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk
-/html5.js"></script>
-        <![endif]-->
+<link rel="stylesheet" href="${url}" type="text/css" media="screen, projection">
+
 </head>
 <body>
 	<header>
