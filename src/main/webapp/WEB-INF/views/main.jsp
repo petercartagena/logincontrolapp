@@ -34,6 +34,7 @@
 		<!-- Introduction -->
 		<div id="intro-left">
 			<header>
+			
 				<h2>Cansado de seguimientos infructosos?</h2>
 			</header>
 			<p>Permite a tu médico, tener un seguimiento de tus niveles de
