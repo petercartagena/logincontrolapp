@@ -39,6 +39,11 @@
 		<br>
 	</section>
 	
+	
+	COUT: <c:out value="${now}" />
+	
+	
+	
 	<div id="contact">
 		<h1><fmt:message key="app.about.what.title" /></h1>
 		<h3><fmt:message key="app.about.what.message" /></h3>

@@ -20,6 +20,7 @@ public class WhereController {
 	@RequestMapping(value = "where")
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
 		String now = (new Date()).toString();
 		logger.info("Returning where view with " + now);
 		return new ModelAndView("where", "now", now);
