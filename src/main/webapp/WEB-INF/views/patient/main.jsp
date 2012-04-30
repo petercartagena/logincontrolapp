@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+<%@ include file="/WEB-INF/views/include.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,6 @@
 <title><fmt:message key="app.title" /></title>
 <c:url value="/css/style.css" var="url" />
 <link rel="stylesheet" href="${url}" type="text/css" media="screen, projection">
-
 </head>
 <body>
 	<header>
@@ -15,7 +14,7 @@
 				<fmt:message key="app.title" />
 			</h1>
 			<h2>
-				<fmt:message key="app.join.title" />
+				<fmt:message key="app.main.title" />
 			</h2>
 		</hgroup>
 	</header>
@@ -31,11 +30,11 @@
 <!-- 			<li class="subscribe"><a href="#">Subscribe-RSS</a></li> -->
 		</ul>
 	</nav>
-	<!-- 	<section id="intro"> -->
-	<!-- 	</section> -->
-	<section>
-		<!-- Main context -->
-		<div></div>
+	<section id="intro">
+		<!-- Introduction -->
+		<br>
+		<br>
+		<h1>PATIENT MAIN PAGE</h1>
 	</section>
 	<aside>
 		<!-- Sidebar -->
@@ -44,6 +43,5 @@
 		<!-- Footer -->
 <!-- 		<div></div> -->
 	</footer>
-
 </body>
 </html>

@@ -18,12 +18,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class SingInController {
 	protected final Log	logger	= LogFactory.getLog(getClass());
 
-	@RequestMapping(value = "singin")
+	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.SINGIN)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String now = (new Date()).toString();
-		logger.info("Returning singin view with " + now);
-		return new ModelAndView("singin");
+		logger.info("Returning " + Constants.SINGIN + "  view with " + now);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.SINGIN);
 
 	}
 }

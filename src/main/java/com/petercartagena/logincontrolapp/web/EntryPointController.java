@@ -27,7 +27,7 @@ public class EntryPointController {
 	@Autowired(required = false)
 	private IUserManager	iuserManager;
 
-	@RequestMapping(value = "main.html")
+	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.MAIN)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String now = (new Date()).toString();
@@ -37,7 +37,7 @@ public class EntryPointController {
 		myModel.put("now", now);
 		myModel.put("users", this.iuserManager.getUsers());
 
-		return new ModelAndView("main", "model", myModel);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.MAIN, "model", myModel);
 
 	}
 

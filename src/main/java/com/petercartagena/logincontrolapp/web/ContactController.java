@@ -17,12 +17,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class ContactController {
 	protected final Log	logger	= LogFactory.getLog(getClass());
 
-	@RequestMapping(value = "contact")
+	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.CONTACT)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String now = (new Date()).toString();
-		logger.info("Returning contact view with " + now);
-		return new ModelAndView("contact", "now", now);
+		logger.info("Returning " + Constants.CONTACT + " view with " + now);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.CONTACT, "now", now);
 
 	}
 }

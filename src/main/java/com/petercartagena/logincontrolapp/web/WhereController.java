@@ -17,13 +17,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class WhereController {
 	protected final Log	logger	= LogFactory.getLog(getClass());
 
-	@RequestMapping(value = "where")
+	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.WHERE)
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
 		String now = (new Date()).toString();
-		logger.info("Returning where view with " + now);
-		return new ModelAndView("where", "now", now);
+		logger.info("Returning " + Constants.WHERE + " view with " + now);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.WHERE, "now", now);
 
 	}
 }
