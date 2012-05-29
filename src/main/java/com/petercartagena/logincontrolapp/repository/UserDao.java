@@ -6,8 +6,8 @@ import com.petercartagena.logincontrolapp.domain.User;
 
 public interface UserDao {
 
-	public List<User> getUsersList();
+	public abstract List<User> getUsersList();
 
-	public void saveUser(User user);
+	public abstract void saveUser(User user);
 	
 }

@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.petercartagena.logincontrolapp.domain.User;
 
+/*Indica que es una clase relacionada con la capa de persisitencia y que debe ser singleton*/
+/*Spring anotation*/
 @Repository(value = "userDao")
 public class JPAUserDao implements UserDao {
 
@@ -21,8 +23,19 @@ public class JPAUserDao implements UserDao {
 	@PersistenceContext
 	public void setEntityManager(EntityManager em) {
 		this.em = em;
-		System.out.println("ENTITYMANAGERINYECTED: " + em);
+		System.out.println("ENTITYMANAGER: INYECTED");
 	}
+
+	/*
+	 * Estamos indicando que el método en cuestión es transaccional. Lo que hará
+	 * Spring es comprobar si ya existe una transacción abierta, si existe se
+	 * unirá a ella, y si no existe, abrirá una nueva transacción (este
+	 * comportamiento es configurable). De esta forma nos aseguramos que toda
+	 * operación de la base de datos se realiza dentro de una transacción.
+	 * Además si durante la ejecución del método se produce alguna excepción de
+	 * Runtime, se hará automáticamente rollback de la transacción (este
+	 * comportamiento también es configurable).
+	 */
 
 	@Transactional
 	@SuppressWarnings("unchecked")

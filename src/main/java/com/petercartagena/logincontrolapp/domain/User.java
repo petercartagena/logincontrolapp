@@ -8,15 +8,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*Declaramos que se trata de una entidad*/
 @Entity
-@Table(name = "users")
+//@Table(name = "users")
 public class User implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long	serialVersionUID	= 1L;
-
+/*Indica que el id sera generado por la base de datos.*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer				userId;

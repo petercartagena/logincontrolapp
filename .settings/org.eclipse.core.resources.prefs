@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/public/about.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/public/contact.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/public/join.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/public/main.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/public/partials/styles.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/public/singin.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/public/where.jsp=UTF-8
