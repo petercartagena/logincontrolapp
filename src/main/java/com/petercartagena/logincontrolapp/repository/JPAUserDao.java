@@ -1,5 +1,6 @@
 package com.petercartagena.logincontrolapp.repository;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -13,16 +14,17 @@ import com.petercartagena.logincontrolapp.domain.User;
 /*Indica que es una clase relacionada con la capa de persisitencia y que debe ser singleton*/
 /*Spring anotation*/
 @Repository(value = "userDao")
-public class JPAUserDao implements UserDao {
+public class JPAUserDao implements IJPAUserDao {
 
 	private EntityManager	em	= null;
-
+	
 	/*
 	 * Sets the entity manager.
 	 */
 	@PersistenceContext
 	public void setEntityManager(EntityManager em) {
 		this.em = em;
+
 		System.out.println("ENTITYMANAGER: INYECTED");
 	}
 
@@ -46,6 +48,21 @@ public class JPAUserDao implements UserDao {
 	@Transactional(readOnly = false)
 	public void saveUser(User user) {
 		em.merge(user);
+	}
+
+	public void createUser(String user, String password, boolean enable) {
+		 em.createNativeQuery(Queries.CREATE_NEW_USER);
+	}
+
+	public User getUserFromDataBase(String username) {
+	
+		List<User> usersList =  em.createNativeQuery(Queries.GET_ALL_USERS).getResultList();
+		System.out.println("size: " + usersList.size());
+		User user = new User();
+		user = usersList.get(1);
+		System.out.println("user: " + user.getUserName());
+		
+		return user;
 	}
 
 }

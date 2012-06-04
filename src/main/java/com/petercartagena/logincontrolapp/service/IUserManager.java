@@ -12,5 +12,7 @@ public interface IUserManager {
 	public void changeUser(User user, User newUser);
 
 	public List<User> getUsers();
+	
+	public void createUser(String user, String password, boolean enable);
 
 }

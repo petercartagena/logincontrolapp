@@ -10,16 +10,20 @@ import org.junit.Test;
 
 import com.petercartagena.logincontrolapp.domain.User;
 
+
+/*Solo prueba la interacion entre el SimpleUserManager y quien lo utiliza. No prueba la conexion con la base de datos.*/
+
+
 public class SimpleUserManagerTests {
 
-	private SimpleUserManager	simpleUserManager;
+	private UserManager	simpleUserManager;
 
 	private List<User>			users;
 
 	@Before
 	public void setUp() {
 		
-		simpleUserManager = new SimpleUserManager();
+		simpleUserManager = new UserManager();
 		users = new ArrayList<User>();
 
 		User user = new User();
@@ -46,6 +50,8 @@ public class SimpleUserManagerTests {
 	@Test
 	public void testGetUser() {
 
+		simpleUserManager.setUsers(users);
+		System.out.println("TEST: " + simpleUserManager.getUsers().size());
 		User user = new User();
 		user.setUserName("peter");
 		user.setPassword("1234");

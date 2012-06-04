@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import com.petercartagena.logincontrolapp.domain.User;
 
+/*TODO Prueba inutil borrar*/
+
 public class UserTests {
 
 	private User	user;

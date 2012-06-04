@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.petercartagena.logincontrolapp.web.Constants;
+
 /**
  * Handles and retrieves the login or denied page depending on the URI template
  */
 @Controller
-@RequestMapping("/auth")
+//@RequestMapping("/authentication/")
 public class LoginLogoutController {
 
 	protected static Logger	logger	= Logger.getLogger("controller");
@@ -24,29 +26,16 @@ public class LoginLogoutController {
 	 * 
 	 * @return the name of the JSP page
 	 */
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value =  Constants.PATH_PAGES_AUTHENTICATION + "loginpage", method = RequestMethod.GET)
 	public String getLoginPage(@RequestParam(value = "error", required = false) boolean error, ModelMap model) {
 		logger.debug("Received request to show login page");
 
-		// Add an error message to the model if login is unsuccessful
-		// The 'error' parameter is set to true based on the when the
-		// authentication has failed.
-		// We declared this under the authentication-failure-url attribute
-		// inside the spring-security.xml
-		/*
-		 * See below: <form-login login-page="/krams/auth/login"
-		 * authentication-failure-url="/krams/auth/login?error=true"
-		 * default-target-url="/krams/main/common"/>
-		 */
 		if (error == true) {
-			// Assign an error message
 			model.put("error", "You have entered an invalid username or password!");
 		} else {
 			model.put("error", "");
 		}
-
-		// This will resolve to /WEB-INF/jsp/loginpage.jsp
-		return "loginpage";
+		return Constants.PATH_PAGES_AUTHENTICATION + "loginpage";
 	}
 
 	/**
@@ -55,11 +44,10 @@ public class LoginLogoutController {
 	 * 
 	 * @return the name of the JSP page
 	 */
-	@RequestMapping(value = "/denied", method = RequestMethod.GET)
+	@RequestMapping(value = Constants.PATH_PAGES_AUTHENTICATION + "deniedpage", method = RequestMethod.GET)
 	public String getDeniedPage() {
 		logger.debug("Received request to show denied page");
 
-		// This will resolve to /WEB-INF/jsp/deniedpage.jsp
-		return "deniedpage";
+		return Constants.PATH_PAGES_AUTHENTICATION + "deniedpage";
 	}
 }

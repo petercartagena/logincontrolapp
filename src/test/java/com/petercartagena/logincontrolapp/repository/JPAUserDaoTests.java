@@ -14,18 +14,18 @@ import com.petercartagena.logincontrolapp.domain.User;
 
 public class JPAUserDaoTests {
 
-	private UserDao	userDao;
+	private IJPAUserDao	userDao;
 
+	
+/*TODO El contexto no se encuentra.*/	
 	@Before
 	public void setUp() throws Exception {
-		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:test-context.xml");
-		userDao = (UserDao) context.getBean("userDao");
-
+		ApplicationContext context = new ClassPathXmlApplicationContext("test-context.xml");
+		userDao = (IJPAUserDao) context.getBean("userDao");
 	}
 
 	@Test
 	public void testGetUserList() {
-//		List<User> users = new ArrayList();
 		List<User> users = new ArrayList<User>();
 		users = userDao.getUsersList();
 		Assert.assertEquals(users.size(), 3);

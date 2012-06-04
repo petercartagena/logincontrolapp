@@ -10,10 +10,8 @@
 	<!-- holding properties for database connectivity / -->
 	<!-- <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder> -->
 
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:/jdbc.properties"></property>
-	</bean>
+	<!-- holding properties for database connectivity / -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
 
 	<!-- enabling annotation driven configuration / -->
 	<context:annotation-config />

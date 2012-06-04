@@ -7,14 +7,14 @@ import junit.framework.Assert;
 import org.junit.Test;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.petercartagena.logincontrolapp.service.SimpleUserManager;
+import com.petercartagena.logincontrolapp.service.UserManager;
 
 public class EntryPointControllerTests {
 
 	@Test
 	public void testHandleRequestView() throws Exception {
 		EntryPointController controller = new EntryPointController();
-		controller.setIUserManager(new SimpleUserManager());
+		controller.setIUserManager(new UserManager());
 
 		ModelAndView modelAndView = controller.handleRequest(null, null);
 		Assert.assertEquals("main", modelAndView.getViewName());

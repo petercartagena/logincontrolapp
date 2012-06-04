@@ -9,21 +9,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /*Declaramos que se trata de una entidad*/
-@Entity
-@Table(name = "users")
-public class User implements Serializable {
+public class DBUser implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long	serialVersionUID	= 1L;
-/*Indica que el id sera generado por la base de datos.*/
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private Integer				userId;
 	private String				userName;
 	private String				password;
-	private boolean             enable;
+	private boolean				enable;
+
+	private Integer				access;
 
 	public boolean isEnable() {
 		return enable;
@@ -57,12 +55,11 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public int getAccess(){
-		if(this.enable == true){
-			return 1;
-		}else{
-			return 0;
-		}
+	public Integer getAccess() {
+		return access;
 	}
-	
+
+	public void setAccess(Integer access) {
+		this.access = access;
+	}
 }

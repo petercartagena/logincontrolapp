@@ -1,5 +1,4 @@
 <%@ include file="/WEB-INF/views/include.jsp"%>
-<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -7,8 +6,6 @@
 	<title><fmt:message key="app.title" /></title>
 	<%@ include file ="partials/styles.jsp" %>
 
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
-	<!-- <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script> -->
 </head>
 <body>
 
@@ -44,6 +41,27 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		
+		<canvas id="draw" width="200" height="200">
+			<p>Your browser doesn't support canvas.</p>
+		</canvas>
+		
 	</div>
+	
+	<a href="www.google.es">Hola</a>
+	
+	<script type="text/javascript">
+		var drawingCanvas = document.getElementById('draw');
+		if(drawingCanvas.getContext) {
+			var context = drawingCanvas.getContext('2d');
+			context.fillStyle   = "#00ff00"; 
+			context.strokeStyle = "#000000";
+			context.beginPath();
+			context.arc(100,100,50,0,Math.PI*2,true);
+			context.closePath();
+			context.stroke();
+			context.fill();
+		}
+	</script>
 </body>
 </html>
