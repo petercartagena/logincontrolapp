@@ -3,16 +3,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-	<title><fmt:message key="app.title" /></title>
-	<%@ include file ="partials/styles.jsp" %>
+<title><fmt:message key="app.title" /></title>
+<%@ include file="partials/styles.jsp"%>
 </head>
 <body>
-	
-	<%@ include file ="partials/navbar.jsp" %>
 
+	<%@ include file="partials/navbar.jsp"%>
 	<div class="container">
-		<%@ include file ="partials/footer.jsp" %>
+		<%@ include file="partials/footer.jsp"%>
 	</div>
-
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tab_join").addClass("active");
+		});
+	</script>	
 </body>
 </html>

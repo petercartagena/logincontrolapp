@@ -6,11 +6,11 @@ import com.petercartagena.logincontrolapp.domain.User;
 
 public interface IJPAUserDao {
 
-	public abstract List<User> getUsersList();
+	public List<User> getUsersList();
 
-	public abstract void saveUser(User user);
+	public void saveUser(User user);
 
-	public abstract void createUser(String user, String password, boolean enable);
+	public void createUser(String user, String password, boolean enable);
 	
 	public User getUserFromDataBase(String username);
 	

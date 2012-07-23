@@ -32,7 +32,7 @@ public class EntryPointController {
 
 		String now = (new Date()).toString();
 		logger.info("Returning main view with " + now);
-
+ 
 		Map<String, Object> myModel = new HashMap<String, Object>();
 		myModel.put("now", now);
 		myModel.put("users", this.iuserManager.getUsers());

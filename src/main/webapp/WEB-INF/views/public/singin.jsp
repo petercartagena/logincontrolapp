@@ -23,6 +23,10 @@
 		</form>
 		<%@ include file ="partials/footer.jsp" %>
 	</div>
-
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tab_singin").addClass("active");
+		});
+	</script>	
 </body>
 </html>

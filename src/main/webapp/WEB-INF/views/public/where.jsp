@@ -19,7 +19,11 @@
 		<%@ include file ="partials/footer.jsp" %>
 		
 	</div>
-		
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#tab_where").addClass("active");
+		});
+	</script>		
 
 </body>
 </html>

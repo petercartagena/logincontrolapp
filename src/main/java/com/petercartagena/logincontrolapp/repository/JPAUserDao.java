@@ -55,9 +55,9 @@ public class JPAUserDao implements IJPAUserDao {
 	}
 
 	public User getUserFromDataBase(String username) {
-	
 		List<User> usersList =  em.createNativeQuery(Queries.GET_ALL_USERS).getResultList();
 		System.out.println("size: " + usersList.size());
+		System.out.println("elemento: " + usersList.get(1).getUserName());
 		User user = new User();
 		user = usersList.get(1);
 		System.out.println("user: " + user.getUserName());

@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-
 	<title><fmt:message key="app.title" /></title>
 	<%@ include file ="partials/styles.jsp" %>
 
 </head>
 <body>
-
 	<div class="container">
 		<%@ include file ="partials/navbar.jsp" %>
 		
+		<div id="msgid">
+		</div>		
 		
 		<table class = "table">
 			<thead>
@@ -48,8 +48,18 @@
 		
 	</div>
 	
-	<a href="www.google.es">Hola</a>
 	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#msgid").html("This is Hello World by JQuery");
+		});
+		
+		$(document).ready(function(){
+			$("#tab_main").addClass("active");
+		});
+	</script>	
+	
+
 	<script type="text/javascript">
 		var drawingCanvas = document.getElementById('draw');
 		if(drawingCanvas.getContext) {
