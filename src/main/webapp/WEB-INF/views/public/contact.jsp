@@ -8,14 +8,24 @@
 </head>
 <body>
 	
+	<!-- 	VARS -->
+	<c:url value="/libs/images/star_icon.jpeg" var="icon" />
+	<!-- 	--- -->
+	
+	<fmt:message key="app.contact.product.support.name" var="supportname"/>
+
+	
 	<%@ include file ="partials/navbar.jsp" %>
 
+
 	<div class="container">
+	
 		<div class="row">
 		  	<div class="span6">
-		      <img class="bs-icon" src="#falta_imagen#">
+		      <img class="bs-icon" src="${icon}" width="40px" height="40px">
 		      <h2>
-				<fmt:message key="app.contact.product.support.name" />
+		      	${supportname}
+<%-- 				<fmt:message key="app.contact.product.support.name" /> --%>
 			  </h2>
 			  <h3>
 				<fmt:message key="app.contact.product.support.message" />
@@ -29,7 +39,7 @@
 		<br/>
 		<div class="row">
 		    <div class="span6">
-		      <img class="bs-icon" src="#falta_image#">
+		      <img class="bs-icon" src="${icon}" width="40px" height="40px">
 		      <h2>
 				<fmt:message key="app.contact.business.inquires.name" />
 			  </h2>
