@@ -1,0 +1,41 @@
+//GENERAL_NAMES
+app.title=PCi Express Soluciones Informáticas 
+app.main.title=Inicio
+app.singin.title=Servicios
+app.join.title=Prices
+app.where.title=Where
+app.about.title=About
+app.contact.title=Contact
+
+
+//ABOUT_TAB
+app.about.message=PCI EXPRESS SOLUCIONES INFORMÁTICAS
+app.about.what.title=Quienes somos
+app.about.what.message=PCI EXPRESS SOLUCIONES INFORMÁTICAS, es una empresa canaria creada a finales del año 2010. Somos una empresa jovén, dinámica y solucionamos cualquier tipo de reto que nos propongan.
+
+app.about.why.title=Nuestra labor
+app.about.why.message=Nuestra labor, es ofrecer servicios a empresas y particulares, somos profesionales en el sector, considerada como una de las empresas de informática con bajos precios en el mercado.
+Todos nuestros productos son de alta calidad, con su sello de garantía oficial.
+
+//app.about.who.title=Who
+//app.about.who.message=CADAD was founded by three young guys eager to have our own company developing software solutions.
+
+
+//WHERE_TAB
+app.where.map=<iframe width="625" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=calzada+lateral+del+norte,+las+palmas+de+gran+canaria&amp;aq=&amp;sll=40.396764,-3.713379&amp;sspn=8.364846,19.665527&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+Calz+Lateral+del+Norte,+35014+Las+Palmas+de+Gran+Canaria,+Las+Palmas,+Islas+Canarias&amp;t=h&amp;layer=c&amp;cbll=28.105483,-15.427123&amp;panoid=52_sKp2Fv-tQIAXfrJGDUA&amp;cbp=13,106.91,,0,-4.26&amp;ll=28.082526,-15.428066&amp;spn=0.045199,0.08935&amp;z=14&amp;output=svembed"></iframe><br /><small><a href="http://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=calzada+lateral+del+norte,+las+palmas+de+gran+canaria&amp;aq=&amp;sll=40.396764,-3.713379&amp;sspn=8.364846,19.665527&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+Calz+Lateral+del+Norte,+35014+Las+Palmas+de+Gran+Canaria,+Las+Palmas,+Islas+Canarias&amp;t=h&amp;layer=c&amp;cbll=28.105483,-15.427123&amp;panoid=52_sKp2Fv-tQIAXfrJGDUA&amp;cbp=13,106.91,,0,-4.26&amp;ll=28.082526,-15.428066&amp;spn=0.045199,0.08935&amp;z=14" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
+
+Para contactar con nuestro departamento de Atención al Cliente, puede dirigirse a:
+
+C/ Calzada Lateral del Norte, 2, Local 5-6, 35014 Las Palmas de Gran Canaria. Teléfono: 928 052 880 / 680 804 980
+
+Correo Electronico: pciexpresssoluciones@ono.com
+
+
+//CONTACT_TAB
+app.contact.product.support.name=Para contactar con nuestro departamento de Atención al Cliente, puede dirigirse a:
+app.contact.product.support.message=C/ Calzada Lateral del Norte, 2, Local 5-6, 35014 Las Palmas de Gran Canaria. Teléfono: 928 052 880 / 680 804 980
+app.contact.product.support.email=pciexpresssoluciones@ono.com
+
+//app.contact.business.inquires.name=Business inquires
+//app.contact.business.inquires.message=Please feel free to contact our business team:
+//app.contact.business.inquires.email=business.inquires@plataformacontrolpacientes.com
