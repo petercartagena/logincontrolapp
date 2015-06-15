@@ -1,6 +1,5 @@
 package com.petercartagena.logincontrolapp.repository;
 
-import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -29,14 +28,14 @@ public class JPAUserDao implements IJPAUserDao {
 	}
 
 	/*
-	 * Estamos indicando que el mŽtodo en cuesti—n es transaccional. Lo que har‡
-	 * Spring es comprobar si ya existe una transacci—n abierta, si existe se
-	 * unir‡ a ella, y si no existe, abrir‡ una nueva transacci—n (este
+	 * Estamos indicando que el mï¿½todo en cuestiï¿½n es transaccional. Lo que harï¿½
+	 * Spring es comprobar si ya existe una transacciï¿½n abierta, si existe se
+	 * unirï¿½ a ella, y si no existe, abrirï¿½ una nueva transacciï¿½n (este
 	 * comportamiento es configurable). De esta forma nos aseguramos que toda
-	 * operaci—n de la base de datos se realiza dentro de una transacci—n.
-	 * Adem‡s si durante la ejecuci—n del mŽtodo se produce alguna excepci—n de
-	 * Runtime, se har‡ autom‡ticamente rollback de la transacci—n (este
-	 * comportamiento tambiŽn es configurable).
+	 * operaciï¿½n de la base de datos se realiza dentro de una transacciï¿½n.
+	 * Ademï¿½s si durante la ejecuciï¿½n del mï¿½todo se produce alguna excepciï¿½n de
+	 * Runtime, se harï¿½ automï¿½ticamente rollback de la transacciï¿½n (este
+	 * comportamiento tambiï¿½n es configurable).
 	 */
 
 	@Transactional

@@ -21,23 +21,24 @@ import com.petercartagena.logincontrolapp.service.IUserManager;
 @Controller
 public class EntryPointController {
 
-	protected final Log		logger	= LogFactory.getLog(getClass());
+	protected final Log logger = LogFactory.getLog(getClass());
 
-	// TODO true
 	@Autowired(required = false)
-	private IUserManager	iuserManager;
+	private IUserManager iuserManager;
 
 	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.MAIN)
-	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ModelAndView handleRequest(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 
 		String now = (new Date()).toString();
 		logger.info("Returning main view with " + now);
- 
+
 		Map<String, Object> myModel = new HashMap<String, Object>();
 		myModel.put("now", now);
 		myModel.put("users", this.iuserManager.getUsers());
 
-		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.MAIN, "model", myModel);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.MAIN,
+				"model", myModel);
 
 	}
 

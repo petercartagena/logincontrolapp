@@ -31,7 +31,7 @@ public class LoginLogoutController {
 		logger.debug("Received request to show login page");
 
 		if (error == true) {
-			model.put("error", "You have entered an invalid username or password!");
+			model.put("error", "You have entered an invalid username or password! ");
 		} else {
 			model.put("error", "");
 		}
