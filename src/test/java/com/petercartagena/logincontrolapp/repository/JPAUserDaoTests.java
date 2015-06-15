@@ -16,8 +16,6 @@ public class JPAUserDaoTests {
 
 	private IJPAUserDao	userDao;
 
-	
-/*TODO El contexto no se encuentra.*/	
 	@Before
 	public void setUp() throws Exception {
 		ApplicationContext context = new ClassPathXmlApplicationContext("test-context.xml");
@@ -30,21 +28,5 @@ public class JPAUserDaoTests {
 		users = userDao.getUsersList();
 		Assert.assertEquals(users.size(), 3);
 	}
-
-	@Test
-	public void testSaveUser() {
-		User user = new User();
-		user.setUserName("josejuan");
-		user.setPassword("1234");
-		user.setEnable(true);
-		userDao.saveUser(user);
-
-		Assert.assertEquals(userDao.getUsersList().size(), 4);
-	}
-
-	// @After
-	// private void tear() throws Exception{
-	//
-	// }
 
 }
