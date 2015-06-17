@@ -16,7 +16,7 @@
 		<table class = "table">
 			<thead>
 				<tr>
-			      <th>Userid</th>
+			      <th>User id</th>
 			      <th>Username</th>
 			      <th>Password</th>
 			      <th>Enabled</th>
@@ -26,16 +26,16 @@
 				<c:forEach items="${model.users}" var="user">
 					<tr> 
 						<td>
-							<c:out value="${user[0]}" />
+							${user.userId}
 						</td>
 						<td>
-							<c:out value="${user[1]}" />
+							${user.userName}
 						</td>
 						<td>
-							<c:out value="${user[2]}" />
+							${user.password}
 						</td>
 						<td>
-							<c:out value="${user[3]}" />
+							${user.enable}
 						</td>
 					</tr>
 				</c:forEach>

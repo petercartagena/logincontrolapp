@@ -16,33 +16,32 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.petercartagena.logincontrolapp.service.IUserManager;
+import com.petercartagena.logincontrolapp.service.UserManager;
 
 @Controller
 public class EntryPointController {
 
 	protected final Log logger = LogFactory.getLog(getClass());
 
-	@Autowired(required = false)
-	private IUserManager iuserManager;
+	@Autowired
+	private UserManager userManager;
 
 	@RequestMapping(value = Constants.PATH_PAGES_PUBLIC + Constants.MAIN)
-	public ModelAndView handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		String now = (new Date()).toString();
 		logger.info("Returning main view with " + now);
 
 		Map<String, Object> myModel = new HashMap<String, Object>();
 		myModel.put("now", now);
-		myModel.put("users", this.iuserManager.getUsers());
+		myModel.put("users", this.userManager.getUsers());
 
-		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.MAIN,
-				"model", myModel);
+		return new ModelAndView(Constants.PATH_PAGES_PUBLIC + Constants.MAIN, "model", myModel);
 
 	}
 
-	public void setIUserManager(IUserManager iuserManager) {
-		this.iuserManager = iuserManager;
+	public void setIUserManager(UserManager iuserManager) {
+		 this.userManager = iuserManager;
 	}
 }

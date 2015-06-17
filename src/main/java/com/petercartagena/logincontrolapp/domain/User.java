@@ -2,6 +2,7 @@ package com.petercartagena.logincontrolapp.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +21,13 @@ public class User implements Serializable {
 /*Indica que el id sera generado por la base de datos.*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="USER_ID")
 	private Integer				userId;
+	@Column(name="USERNAME")
 	private String				userName;
+	@Column(name="PASSWORD")
 	private String				password;
+	@Column(name="ENABLED")
 	private boolean             enable;
 
 	public boolean isEnable() {
