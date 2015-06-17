@@ -24,7 +24,6 @@
     
   
 	<mvc:resources mapping="/libs/**" location="/libs/" />
-	
 <!--    <mvc:resources mapping="/css/**" location="/css/" /> -->
    
 </beans>

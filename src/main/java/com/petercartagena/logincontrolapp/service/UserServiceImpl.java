@@ -11,13 +11,12 @@ public class UserServiceImpl implements UserService{
 
 	@Autowired
 	private UserDao dao;
-	
+
 	public List<User> getUser() {
 		return dao.getUsers();
 	}
 
 	public User getUser(String username, String password) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

@@ -22,7 +22,6 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	public User getUser(String username, String password) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
