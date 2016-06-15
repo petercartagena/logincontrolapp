@@ -1,0 +1,18 @@
+server:
+  port: 9200
+  
+spring:
+   config:
+      name:  indesign
+   application:
+      name:  indesign
+      
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://192.168.99.100:8761/eureka/
+      registerWithEureka: true
+      fetchRegistry: true
+    instance:
+      ip-address: 192.168.99.100
+      prefer-ip-address: true
